@@ -2,8 +2,6 @@
 
 A lightweight quiz creation and playing single-page application built with **Vite.js**, **React 19**, **TypeScript**, **TailwindCSS 4**, and **TanStack Query 5**.
 
-![Screenshot](docs/screenshot.png)
-
 ---
 
 ## Requirements
@@ -17,7 +15,7 @@ A lightweight quiz creation and playing single-page application built with **Vit
 
 ```bash
 # 1 ▪ Clone & install
-$ git clone https://github.com/your-org/quiz-maker.git
+$ git clone https://github.com/frenz-fcn/quiz-maker.git
 $ cd quiz-maker
 $ npm install
 
@@ -27,20 +25,8 @@ $ cp .env.example .env            # create your local env‐file
 #   VITE_APP_BASE_URL=<https://api.example.com>
 #   VITE_APP_TOKEN=<your-jwt-token>
 
-# 3 ▪ Run dev-server with hot reload
 $ npm run dev                     # http://localhost:5173
 ```
-
-### Additional scripts
-
-| command                | purpose                                         |
-| ---------------------- | ----------------------------------------------- |
-| `npm run build`        | Type-check & produce production bundle (./dist) |
-| `npm run preview`      | Serve the build locally for smoke tests         |
-| `npm run lint`         | ESLint code quality check                       |
-| `npm run lint:fix`     | Auto-fix ESLint issues                          |
-| `npm run format`       | Format using Prettier                           |
-| `npm run format:check` | Verify formatting without writing               |
 
 ---
 
@@ -87,7 +73,7 @@ Anti-cheat is provided by `useAntiCheatContext` (src/hooks).
 
 ```text
 src/
-  ├─ components/        # reusable UI atoms & molecules
+  ├─ components/        # reusable UI components
   ├─ hooks/             # domain-specific hooks (queries, mutations, anti-cheat)
   ├─ pages/             # route-level screens (builder, play, result)
   ├─ providers/         # React context providers (Query, AntiCheat)
