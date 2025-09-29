@@ -35,8 +35,6 @@ const QuizResult = () => {
   const totalQuestions =
     questions?.filter((q) => q.type !== 'code').length ?? 0;
 
-  console.log(result.antiCheat);
-
   return (
     <div className="min-h-screen bg-interface-subtle flex flex-col items-center py-8 px-4">
       <div className="w-full max-w-3xl bg-white shadow-lg rounded-lg p-8 mb-10 flex flex-col gap-6">
