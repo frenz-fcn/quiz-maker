@@ -97,12 +97,25 @@ const Question = ({
   useEffect(() => {
     setQAnswer(answers.find((a) => a.questionId === question.id)?.value ?? '');
   }, [answers, question]);
-
+  const prompt = question.prompt.split(' ');
   return (
     <div className="flex flex-col gap-6">
-      <Text as="h2" size="body-large" weight="semibold">
-        {question.prompt}
-      </Text>
+      <div className="flex items-center gap-1">
+        {prompt.map((part, i) => (
+          <Text as="h2" size="body-large" weight="semibold">
+            {part.startsWith('`') && part.endsWith('`') ? (
+              <code
+                key={i}
+                className="bg-slate-600 rounded p-1 text-slate-100 !font-normal"
+              >
+                {part.slice(1, -1)}
+              </code>
+            ) : (
+              part
+            )}
+          </Text>
+        ))}
+      </div>
       {question.type === 'short' && (
         <TextInput
           className="w-1/2"
