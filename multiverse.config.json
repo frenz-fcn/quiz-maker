@@ -1,0 +1,11 @@
+{
+  "$schema": "https://multiverse-ds-playground.multisyscorp.io/schema.json",
+  "tailwind": {
+    "version": "v4",
+    "css": "src/index.css"
+  },
+  "directory": {
+    "components": "src/components",
+    "utilities": "src"
+  }
+}
