@@ -50,8 +50,8 @@ $ npm run dev                     # http://localhost:5173
 
 Trade-offs
 
-- Pure-SPA (CSR) — simpler deployment (static hosting) but limited SEO vs SSR.
-- Tailwind utilities in markup may feel verbose; design tokens mitigated via `class-variance-authority`.
+- Pure-SPA
+- Tailwind utility-first CSS framework packed with classes.
 - TanStack Query introduces extra bundle size (~7 KB gzip) but saves custom boilerplate.
 
 ---
@@ -63,7 +63,7 @@ Anti-cheat is provided by `useAntiCheatContext` (src/hooks).
 - **Tab switch detection** – when the window loses focus (`blur`) and regains it (`focus`), a `switch` event is logged.
 - **Paste detection** – calling `logPaste()` records `paste` events (integrated in answer inputs).
 - Each event is stored with a timestamp in React state.
-- Consumers can call `getSummary()` to retrieve the event array, e.g. to submit alongside quiz answers for server-side analysis.
+- Call `getSummary()` to retrieve the event array, e.g. to submit alongside quiz answers.
 
 > NOTE: Events live only in memory; sending them to the backend is left to the caller.
 
